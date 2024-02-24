@@ -27,13 +27,17 @@ class NewsViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.layer.backgroundColor = UIColor.black.cgColor;
         let url = URL(string: arr_articles_urlToImage[indexPath.row])
         cell.myimageview.af.setImage(withURL: url!)
+//cell.layer.cornerRadius = 30
+        cell.separatorInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 294
-        
-        
+        return 148
     }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+            return 10 // Adjust the minimum space after each cell
+        }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print("---------------")

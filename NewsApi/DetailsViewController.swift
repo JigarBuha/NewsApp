@@ -28,6 +28,7 @@ class DetailsViewController: UIViewController {
     
   
     @IBOutlet weak var lblurl: UILabel!
+    @IBOutlet weak var Btnmore: UIButton!
     @IBAction func Readmore(_ sender: Any) {
             
         if let web = lblurl.text, let url = URL(string: web) {
@@ -50,8 +51,8 @@ class DetailsViewController: UIViewController {
         lblurl.isHidden = true
         let url = URL(string: imageview)
         self.myimageview.af.setImage(withURL: url!)
-        myimageview.layer.cornerRadius = 20
-        
+     //   myimageview.layer.cornerRadius = 20
+        Btnmore.layer.cornerRadius = 15
     }
 
 }
